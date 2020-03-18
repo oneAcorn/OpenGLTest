@@ -16,6 +16,7 @@ class TestGLRenderer : GLSurfaceView.Renderer {
     override fun onDrawFrame(gl: GL10) {
         //以背景色刷新
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT)
+        triangle.draw(Triangle.triangleCoords)
     }
 
     override fun onSurfaceChanged(gl: GL10, width: Int, height: Int) {
